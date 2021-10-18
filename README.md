@@ -1,6 +1,7 @@
-[![Go report](https://goreportcard.com/badge/github.com/lcomrade/lenin?style=flat-square)](https://goreportcard.com/report/github.com/lcomrade/lenin)
-[![Release](https://img.shields.io/github/v/release/lcomrade/lenin?style=flat-square)](https://github.com/lcomrade/lenin/releases/latest)
-[![License](https://img.shields.io/github/license/lcomrade/lenin?style=flat-square)](https://github.com/lcomrade/lenin/blob/main/LICENSE)
+[![Go report](https://goreportcard.com/badge/github.com/lcomrade/lenin)](https://goreportcard.com/report/github.com/lcomrade/lenin)
+[![Go Reference](https://pkg.go.dev/badge/github.com/lcomrade/lenin.svg)](https://pkg.go.dev/github.com/lcomrade/lenin)
+[![Release](https://img.shields.io/github/v/release/lcomrade/lenin)](https://github.com/lcomrade/lenin/releases/latest)
+[![License](https://img.shields.io/github/license/lcomrade/lenin)](https://github.com/lcomrade/lenin/blob/main/LICENSE)
 
 **Lenin** is a golang library for working with the Lenpaste API.
 
