@@ -26,7 +26,7 @@ import (
 	"net/url"
 )
 
-// Get raw URL data
+// Make GET request.
 func getURL(url string) ([]byte, error) {
 	var out []byte
 
@@ -46,6 +46,7 @@ func getURL(url string) ([]byte, error) {
 	return out, nil
 }
 
+// Make POST request.
 func postURL(vals url.Values, url string) ([]byte, error) {
 	var out []byte
 
@@ -65,7 +66,7 @@ func postURL(vals url.Values, url string) ([]byte, error) {
 	return out, nil
 }
 
-// NEW
+// Create new paste.
 func New(req NewReq, baseURL string) (NewResp, error) {
 	var resp NewResp
 
@@ -91,7 +92,7 @@ func New(req NewReq, baseURL string) (NewResp, error) {
 	return resp, nil
 }
 
-// GET PASTE_NAME
+// Get existed paste by name.
 func Get(req GetReq, baseURL string) (GetResp, error) {
 	var resp GetResp
 
@@ -111,7 +112,7 @@ func Get(req GetReq, baseURL string) (GetResp, error) {
 	return resp, nil
 }
 
-// ABOUT
+// Get server about.
 func About(baseURL string) (AboutResp, error) {
 	var resp AboutResp
 
@@ -131,7 +132,7 @@ func About(baseURL string) (AboutResp, error) {
 	return resp, nil
 }
 
-// RULES
+// Get server rules.
 func Rules(baseURL string) (RulesResp, error) {
 	var resp RulesResp
 
@@ -151,7 +152,7 @@ func Rules(baseURL string) (RulesResp, error) {
 	return resp, nil
 }
 
-// VERSION
+// Get server version information.
 func Version(baseURL string) (VersionResp, error) {
 	var resp VersionResp
 

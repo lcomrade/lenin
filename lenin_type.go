@@ -19,7 +19,6 @@
 
 package lenin
 
-// /api/new
 type NewReq struct {
 	Title      string
 	Text       string
@@ -30,7 +29,6 @@ type NewResp struct {
 	Name string
 }
 
-// /api/get/PASTE_NAME
 type GetReq struct {
 	Name string
 }
@@ -46,19 +44,16 @@ type GetRespInfo struct {
 	DeleteTime int64
 }
 
-// /api/about
 type AboutResp struct {
 	Exist bool
 	Text  string
 }
 
-// /api/rules
 type RulesResp struct {
 	Exist bool
 	Text  string
 }
 
-// /api/version
 type VersionResp struct {
 	Version   string
 	GitTag    string
