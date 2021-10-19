@@ -93,11 +93,11 @@ func New(req NewReq, baseURL string) (NewResp, error) {
 }
 
 // Get existed paste by name.
-func Get(req GetReq, baseURL string) (GetResp, error) {
+func Get(name string, baseURL string) (GetResp, error) {
 	var resp GetResp
 
 	//Get raw
-	raw, err := getURL(baseURL + "/get/" + req.Name)
+	raw, err := getURL(baseURL + "/get/" + name)
 	if err != nil {
 		return resp, err
 	}

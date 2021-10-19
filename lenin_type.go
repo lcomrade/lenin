@@ -29,10 +29,6 @@ type NewResp struct {
 	Name string
 }
 
-type GetReq struct {
-	Name string
-}
-
 type GetResp struct {
 	Name string
 	Text string
@@ -42,6 +38,7 @@ type GetResp struct {
 type GetRespInfo struct {
 	CreateTime int64
 	DeleteTime int64
+	Title      string
 }
 
 type AboutResp struct {
