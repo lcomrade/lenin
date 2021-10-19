@@ -21,10 +21,31 @@ package lenin
 
 import (
 	"encoding/json"
+	"errors"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 )
+
+// Remote server errors.
+func httpErrorCheck(code int, raw []byte) error {
+	//Check HTTP status code
+	if code != 200 {
+		//Pares error
+		var remoteErr remoteError
+
+		//Unmarshal raw
+		err := json.Unmarshal(raw, &remoteErr)
+		if err != nil {
+			return errors.New("remote error: " + err.Error())
+		}
+
+		//Return error
+		return errors.New("remote error: " + remoteErr.Error)
+	}
+
+	return nil
+}
 
 // Make GET request.
 func getURL(url string) ([]byte, error) {
@@ -38,6 +59,12 @@ func getURL(url string) ([]byte, error) {
 
 	//Read
 	out, err = ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return out, err
+	}
+
+	//Check to server internal error
+	err = httpErrorCheck(resp.StatusCode, out)
 	if err != nil {
 		return out, err
 	}
@@ -58,6 +85,12 @@ func postURL(vals url.Values, url string) ([]byte, error) {
 
 	//Read
 	out, err = ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return out, err
+	}
+
+	//Check to server internal error
+	err = httpErrorCheck(resp.StatusCode, out)
 	if err != nil {
 		return out, err
 	}

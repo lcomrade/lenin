@@ -19,6 +19,11 @@
 
 package lenin
 
+type remoteError struct {
+	Code  int
+	Error string
+}
+
 type NewReq struct {
 	Title      string
 	Text       string
