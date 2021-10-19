@@ -46,4 +46,5 @@ func main() {
 
 ## Documentation
 - [Documentation](https://pkg.go.dev/github.com/lcomrade/lenin#section-documentation)
+- [More examples](https://github.com/lcomrade/lenin/blob/main/docs/examples.md)
 - [Popular errors](https://github.com/lcomrade/lenin/blob/main/docs/errors.md)
