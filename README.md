@@ -22,9 +22,10 @@ import(
 
 func main() {
 	// Base API URL
-	// ! URL must start with "http://" or "https://"
-	// ! URL must not end with "/"
 	baseURL := "https://paste.lcomrade.su/api"
+
+	//Clean base URL
+	baseURL = lenin.CleanURL(baseURL)
 
 	// Create request
 	req := lenin.NewReq {

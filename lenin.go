@@ -99,6 +99,25 @@ func postURL(vals url.Values, url string) ([]byte, error) {
 	return out, nil
 }
 
+// Clean base URL. Performs the following actions:
+//
+//  1. If the URL does not start with "http://" or "https://" adds "http://".
+//  2. Deletes the "/" at the end.
+func CleanURL(url string) string {
+	//Step 1
+	if url[0:7] != "http://" && url[0:8] != "https://" {
+		url = "http://" + url
+	}
+
+	//Step 2
+	lastChar := string(url[len(url)-1:])
+	if lastChar == "/" {
+		url = url[0 : len(url)-1]
+	}
+
+	return url
+}
+
 // Create new paste.
 func New(req NewReq, baseURL string) (NewResp, error) {
 	var resp NewResp
