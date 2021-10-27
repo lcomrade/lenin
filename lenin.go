@@ -124,9 +124,17 @@ func New(req NewReq, baseURL string) (NewResp, error) {
 
 	//Create form
 	vals := url.Values{}
+
 	vals.Set("title", req.Title)
 	vals.Add("text", req.Text)
 	vals.Add("expiration", req.Expiration)
+
+	if req.OneUse == true {
+		vals.Add("oneUse", "true")
+
+	} else {
+		vals.Add("oneUse", "false")
+	}
 
 	//Get raw
 	raw, err := postURL(vals, baseURL+"/new")

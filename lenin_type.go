@@ -27,6 +27,7 @@ type remoteError struct {
 type NewReq struct {
 	Title      string
 	Text       string
+	OneUse     bool
 	Expiration string
 }
 
@@ -43,6 +44,7 @@ type GetResp struct {
 type GetRespInfo struct {
 	CreateTime int64
 	DeleteTime int64
+	OneUse     bool
 	Title      string
 }
 
