@@ -8,11 +8,13 @@
 `NOTE:` Library releases correspond to the Lenpaste server releases.
 
 ## Install
-Run: `go get github.com/lcomrade/lenin`
+```
+go get github.com/lcomrade/lenin
+```
 
 ## Example
-### Create new paste
-```
+Create new paste:
+```go
 package main
 
 import(
