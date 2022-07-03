@@ -3,6 +3,12 @@
 [![Release](https://img.shields.io/github/v/release/lcomrade/lenin)](https://github.com/lcomrade/lenin/releases/latest)
 [![License](https://img.shields.io/github/license/lcomrade/lenin)](https://github.com/lcomrade/lenin/blob/main/LICENSE)
 
+> ## Repository archiving
+> This repository has been permanently moved to my own Git server.
+> Stay tuned for updates here: https://git.lcomrade.su/root/lenin
+>
+> Read about the reason for this action here: https://github.com/lcomrade/lcomrade#give-up-github
+
 **Lenin** is a golang library for working with the Lenpaste API.
 
 `NOTE:` Library releases correspond to the Lenpaste server releases.
